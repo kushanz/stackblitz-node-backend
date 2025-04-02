@@ -1,3 +1,10 @@
-// run `node index.js` in the terminal
+const expres = require('express');
+const app = express();
+app.listen(3000, () => {
+    console.log('Server is running on port 3000')
+})
 
-console.log(`Hello Node.js v${process.versions.node}!`);
+app.get('/',(req,res) => {
+    res.send('Hello world')
+})
+
